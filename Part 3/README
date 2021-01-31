@@ -1,0 +1,49 @@
+wechall name: lcdomin1
+
+bandit0:
+	Login Password: bandit0
+	Filename: readme
+	Problem: none
+	Password contained in fjile: "boJ9jbbUNNfktd78OOpsqOltutMc3MY1"
+
+bandit1:
+	Login Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+	Filename: "-"
+	Problem: cat can't open a filename that starts with "-"
+	Solution: cat <- to open the file
+	Password contained in file: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+bandit2:
+	Login Password: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+	Filename: "spaces in this filename"
+	Problem: appears to be several files but it's a filename with spaces
+	Solution: Used "cat s<tab> and Linux filled in the filename with \
+	Password contained in "spaces in this filename": UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+bandit3:
+	Login Password: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+	Filename: <none>
+	Problem: The filename is hidden.
+	Solution: Used ls -a to list all files. Found the filename ".hidden"
+				Used cat .hidden to open the file.
+	Password contained in file: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+	
+bandit4:
+	Login Password: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+	Filenames found: several filenames ranging from -file00 to -file09
+	Problem: There are several files to open and 9 of 10 contain unreadable text
+	Solution: Had to open several files with "cat <-file0#". Found the password in -file07
+	Password contained in file:koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+	
+bandit5:
+	Login Password: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+	Filename: multiple
+	Problem: the password file is hidden within several directories. I know the executables aren't what I need 
+				but I had to find the right file. I opened the first text file "-file2" in the maybehere00 
+				folder and found a really long string. I opened the ".file2" and found that it was also a really 
+				long string but not as long as the -file2. I did the same for mabyehere01 and found the same 
+				pattern.
+	Solution: I opened every directory and opened the .file2 until I found a 32 character string like the other 
+				passwords in mabyehere07
+	Password contained in file: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+

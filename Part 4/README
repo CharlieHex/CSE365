@@ -1,0 +1,17 @@
+Name:	Luis Dominguez
+ASU ID:	1000804445
+Associated files: command.c, Makefilel
+
+Function: 
+	The program will display an integer representing the number of command line arguments accompanying the
+	./command when the executable is run on the command line. The program will also print the arguments in the 
+	reverse order.
+	
+Number of Arguments: 
+	The program makes use of two arguments passed into main: argc and an array of character 
+	strings. When executed, the program prints one less than the value of argc since it defaults to 1 when the 
+	program is run. 
+	
+Reversed Order Arguments:
+	To print the arguments in reverse order, a for-loop is used and initialized to one less than the number of 
+	arguments passed in. The loop prints from the end of the charactar through the first item.
