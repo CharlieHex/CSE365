@@ -17,6 +17,9 @@ using namespace std;
 
 // Server owner keys
 const char *keys[10];
+
+// String literals
+char fireKey[] = "FIREFIGHTER_SECRET_KEY";
 // Allocate space for four user arguments
 const char *USER_EVENT[4];
 
@@ -70,18 +73,27 @@ int main( int argc, char *argv[] )  {
                 word++;
             }
         }
+        printf("TEST: USER ENTERED: %s\n", USER_INPUT);
+        printf("TEST: fireKey is: %s\n", fireKey);
+        
         //copy strings
 
         //switch on number of words
         switch(word) {
             case 1 :
-                printf("ONE WORD PROCEDURE\n" );
-                    //fire fighter
-                    //error
+                //printf("TEST: ONE WORD PROCEDURE\n" );
+                    if(strcmp(USER_INPUT,fireKey) == 0)
+                        cout << "FIRE FIGHTER KEY ENTERED\n";
+                    else{
+                        cout << "ERROR\n";
+                    }
                 break;
             case 2 :
                 printf("TWO WORD PROCEDURE\n" );
+                    //turn key
+                    //enter house
                     //who's inside
+                    //change locks
                     //error
                 break;
             case 3 :

@@ -7,20 +7,19 @@
 */
 #include <iostream>
 
-using namespace std;
+int main( int argc, char *argv[] )  {
 
-#include <stdio.h>
-
-int main( int argc, char *argv[] )
-{
-     	cout << argc-1 << endl;
-
-	int counter = argc-1;
-	for(int i = argc-1; i > 0; i-- )
-	{
-		cout << argv[counter] << " ";
-       		counter--;
-	}
-	cout << endl;
-	return 0;
+	
+	if( argc == 2 ) {
+      printf("No key supplied");
+   	}
+   	else if( argc > 2 ) {
+		for(int i = 2; i < argc; i++){
+			printf("TESTING: The key supplied is: %s\n", argv[i]);
+	   	}
+   	}
+      
+   	else {
+      	printf("One argument expected.\n");
+   	}
 }
