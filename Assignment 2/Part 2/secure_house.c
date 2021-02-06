@@ -17,14 +17,8 @@ using namespace std;
 
 // Server owner keys
 const char *keys[10];
-
-
-const char *USER_EVENT_1[1];
-const char *USER_EVENT_2[1];
-const char *USER_EVENT_FINAL[1];
-const char *USER_NAME[1];
-const char *USER_KEY[1];
-
+// Allocate space for four user arguments
+const char *USER_EVENT[4];
 
 int main( int argc, char *argv[] )  {
 
@@ -58,23 +52,50 @@ int main( int argc, char *argv[] )  {
     //Loop until EOF.-----------------------------------------------
     while (len != 0)
     {
-        cout << "Please enter your input commands:\n";
+        //cout << "Please enter your commands:\n";
         // Get the user from the input
         cin.getline(USER_INPUT, 50);
         len = strlen(USER_INPUT);
-        //cout << "User input is " << len << " characters long.\n";
+        //if user hits a newline, end program.
         if(len == 1)
             len = 0;
 
-        // Convert USER_INPUT into an event, user and key
+        // Convert USER_INPUT into an event, user and key-----------
+        
+        // Initialiaze Word Counter
+        int word = 1;
+        //Loop through user input to count words
+        for(int i = 0; i <= len; i++){
+            if(USER_INPUT[i] == ' '){
+                word++;
+            }
+        }
+        //copy strings
+
+        //switch on number of words
+        switch(word) {
+            case 1 :
+                printf("ONE WORD PROCEDURE\n" );
+                    //fire fighter
+                    //error
+                break;
+            case 2 :
+                printf("TWO WORD PROCEDURE\n" );
+                    //who's inside
+                    //error
+                break;
+            case 3 :
+                printf("THREE WORD PROCEDURE\n" );
+                break;
+            case 4 :
+                printf("FOUR WORD PROCEDURE\n" );
+                break;
+            default :
+                printf("ERROR\n" );
+        }
 
     }
     
-    cout << "Goodbye.";
-
-
-
-    // Convert USER_INPUT into an event, user and key
-    // Read user input to end of line
+    cout << "Goodbye.\n";
 
 }
